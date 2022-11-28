@@ -1,57 +1,65 @@
 {
-  "name": "whishlist",
+  "name": "lista-deseados",
   "version": "1.0.0",
   "description": "Ejercicio de introduccion a React",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel src/index.html",
     "lint": "eslint --fix src/**/*.{js,jsx}",
     "format": "prettier --write \"**/*.{js,jsx,json,css}\""
-},
-"author": "Pablo Roger",
-"license": "ISC",
+  },
+  "author": "Pablo Roger",
+  "license": "ISC",
   "dependencies": {
-      "prettier": "^2.8.0",
-      "react": "^18.2.0",
-      "react-dom": "^18.2.0"
-    },
-    "devDependencies": {
-        "eslint": "^8.28.0",
-        "eslint-config-airbnb": "^19.0.4",
-        "eslint-plugin-import": "^2.26.0",
-        "eslint-plugin-jsx-a11y": "^6.6.1",
-        "eslint-plugin-react": "^7.31.11",
-        "husky": "^8.0.2",
-        "lint-staged": "^13.0.4",
-        "parcel-bundler": "^1.12.5"
-    },
-    "husky": {
+    "classnames": "^2.3.2",
+    "prettier": "^2.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.11",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.4",
+    "parcel-bundler": "^1.12.5"
+  },
+  "husky": {
     "hooks": {
-        "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged"
     }
-},
-"lint-staged": {
+  },
+  "lint-staged": {
     "src/**/*.{js,jsx}": [
-        "npm run lint"
+      "npm run lint"
     ],
     "src/**/*.{js,jsx,json,css,scss}": [
-        "prettier --write",
-        "git add"
+      "prettier --write",
+      "git add"
     ]
-},
-"prettier":{
+  },
+  "prettier": {
     "trailinComma": "all",
     "singleQuote": true,
     "tabWidth": 2
-},
-
-"eslint": {
+  },
+  "eslint": {
     "extends": "airbnb",
     "env": {
-        "browser": true
+      "browser": true
     },
     "rules": {
-        "linebreak-style": "off"
+      "linebreak-style": "off"
     }
-}
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PabloRoger/lista-deseados.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PabloRoger/lista-deseados/issues"
+  },
+  "homepage": "https://github.com/PabloRoger/lista-deseados#readme"
 }

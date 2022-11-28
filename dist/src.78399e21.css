@@ -1,0 +1,83 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app{
+  width: 700px;
+  margin: auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: whitesmoke;
+}
+
+
+/* BEM */
+
+.deseo-input{
+  border: 0px;
+  border-bottom: 1px solid grey;
+  margin-bottom: 30px;
+}
+
+.deseo-input__label{
+  margin: 15px 0px;
+  font-weight: 700;
+}
+
+.deseo-input__field{
+  width: 100%;
+  border: 0px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+
+.deseo-lista{
+  list-style: none;
+  padding: 0px;
+}
+
+.deseo-lista__item{
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  margin: 15px 0px;
+}
+
+.deseo-lista__item > * + *{
+  margin-left: 10px;
+}
+
+.deseo-lista__item input{
+  width: 15px;
+  height: 15px;
+  margin-right: 20px;
+}
+
+.deseo-lista__item--hecho{
+  text-decoration: line-through;
+}
+
+
+.deseo-limpiar{
+  width: 100%;
+  padding: 5px;
+  background-color: white;
+  font-size: 16px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.deseo-limpiar:hover{
+  background-color: black;
+  color: white;
+}
+
+
+/*# sourceMappingURL=/src.78399e21.css.map */
