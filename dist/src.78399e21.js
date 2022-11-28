@@ -28918,39 +28918,7 @@ module.exports = reloadCSS;
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"App/DeseoInput/DeseoInput.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireDefault(require("react"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var DeseoInput = function DeseoInput() {
-  return /*#__PURE__*/_react.default.createElement("fieldset", {
-    className: "deseo-input"
-  }, /*#__PURE__*/_react.default.createElement("legend", {
-    className: "deseo-input__label"
-  }, "Deseos"), /*#__PURE__*/_react.default.createElement("input", {
-    className: "deseo-input__field",
-    placeholder: "Pon tu deseo aqui"
-  }));
-};
-var _default = DeseoInput;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"App/DeseoInput/index.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _DeseoInput = _interopRequireDefault(require("./DeseoInput"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var _default = _DeseoInput.default;
-exports.default = _default;
-},{"./DeseoInput":"App/DeseoInput/DeseoInput.jsx"}],"../node_modules/react-is/cjs/react-is.development.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/react-is/cjs/react-is.development.js":[function(require,module,exports) {
 /** @license React v16.13.1
  * react-is.development.js
  *
@@ -29881,7 +29849,76 @@ if ("development" !== 'production') {
   // http://fb.me/prop-types-in-prod
   module.exports = require('./factoryWithThrowingShims')();
 }
-},{"react-is":"../node_modules/react-is/index.js","./factoryWithTypeCheckers":"../node_modules/prop-types/factoryWithTypeCheckers.js"}],"../node_modules/classnames/index.js":[function(require,module,exports) {
+},{"react-is":"../node_modules/react-is/index.js","./factoryWithTypeCheckers":"../node_modules/prop-types/factoryWithTypeCheckers.js"}],"App/DeseoInput/DeseoInput.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+var _propTypes = _interopRequireDefault(require("prop-types"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+var DeseoInput = function deseo(_ref) {
+  var onNuevoDeseo = _ref.onNuevoDeseo;
+  // Los hooks son funciones que nos permiten usar el estado de los componentes
+  // Primer elemento del array es el valor del estado y el segundo es una función para modificarlo
+  var _useState = (0, _react.useState)(''),
+    _useState2 = _slicedToArray(_useState, 2),
+    nuevoDeseoTexto = _useState2[0],
+    setNuevoDeseoTexto = _useState2[1];
+  return /*#__PURE__*/_react.default.createElement("fieldset", {
+    className: "deseo-input"
+  }, /*#__PURE__*/_react.default.createElement("legend", {
+    className: "deseo-input__label"
+  }, "Deseos"), /*#__PURE__*/_react.default.createElement("input", {
+    className: "deseo-input__field",
+    placeholder: "Pon tu deseo aqui",
+    value: nuevoDeseoTexto,
+    onChange: function onChange(e) {
+      return setNuevoDeseoTexto(e.target.value);
+    },
+    onKeyUp: function onKeyUp(e) {
+      if (e.key === 'Enter' && nuevoDeseoTexto.length) {
+        onNuevoDeseo({
+          hecho: false,
+          texto: nuevoDeseoTexto
+        });
+        setNuevoDeseoTexto('');
+      }
+    }
+  }));
+};
+
+// Siempre que se use una propiedad, hay que definir su tipo y el caso por defecto
+DeseoInput.propTypes = {
+  onNuevoDeseo: _propTypes.default.func
+};
+DeseoInput.defaultProps = {
+  onNuevoDeseo: function onNuevoDeseo() {}
+};
+var _default = DeseoInput;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js"}],"App/DeseoInput/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _DeseoInput = _interopRequireDefault(require("./DeseoInput"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _default = _DeseoInput.default;
+exports.default = _default;
+},{"./DeseoInput":"App/DeseoInput/DeseoInput.jsx"}],"../node_modules/classnames/index.js":[function(require,module,exports) {
 var define;
 /*!
 	Copyright (c) 2018 Jed Watson.
@@ -29944,7 +29981,70 @@ var define;
 	}
 }());
 
-},{}],"App/DeseoLista/DeseoLista.jsx":[function(require,module,exports) {
+},{}],"App/DeseoItem/DeseoItem.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+var _classnames = _interopRequireDefault(require("classnames"));
+var _propTypes = _interopRequireDefault(require("prop-types"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var DeseoItem = function item(_ref) {
+  var texto = _ref.texto,
+    hecho = _ref.hecho,
+    id = _ref.id,
+    onItemHecho = _ref.onItemHecho;
+  return (
+    /*#__PURE__*/
+    // Con classNames podemos pasarle un objeto con los nombres de las clases
+    // En este caso, si hecho es true, se agrega la clase deseo-lista__item--hecho
+    // Las keys sirven para que React pueda identificar cada elemento de la lista.
+    // Recomendable cuando se hace un map
+    _react.default.createElement("li", {
+      className: (0, _classnames.default)('deseo-lista__item', {
+        'deseo-lista__item--hecho': hecho
+      })
+    }, /*#__PURE__*/_react.default.createElement("input", {
+      id: id,
+      checked: hecho,
+      onChange: function onChange(e) {
+        return onItemHecho(e.target.checked);
+      },
+      type: "checkbox"
+    }), /*#__PURE__*/_react.default.createElement("label", {
+      htmlFor: id
+    }, texto))
+  );
+};
+DeseoItem.propTypes = {
+  texto: _propTypes.default.string,
+  hecho: _propTypes.default.bool,
+  id: _propTypes.default.number,
+  onItemHecho: _propTypes.default.func
+};
+DeseoItem.defaultProps = {
+  texto: '',
+  hecho: false,
+  id: 0,
+  onItemHecho: function onItemHecho() {}
+};
+var _default = DeseoItem;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","classnames":"../node_modules/classnames/index.js","prop-types":"../node_modules/prop-types/index.js"}],"App/DeseoItem/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _DeseoItem = _interopRequireDefault(require("./DeseoItem"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _default = _DeseoItem.default;
+exports.default = _default;
+},{"./DeseoItem":"App/DeseoItem/DeseoItem.jsx"}],"App/DeseoLista/DeseoLista.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29953,48 +30053,54 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _propTypes = _interopRequireDefault(require("prop-types"));
-var _classnames = _interopRequireDefault(require("classnames"));
+var _DeseoItem = _interopRequireDefault(require("../DeseoItem"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+// Cuando pasamos por parámetro algo entre {}, estamos llamando a una propiedad
 var DeseoLista = function DeseoLista(_ref) {
-  var deseos = _ref.deseos;
+  var deseos = _ref.deseos,
+    onDeseosCambiados = _ref.onDeseosCambiados;
   return /*#__PURE__*/_react.default.createElement("ul", {
     className: "deseo-lista"
   }, deseos.map(function (_ref2, i) {
     var texto = _ref2.texto,
       hecho = _ref2.hecho;
-    return (
-      /*#__PURE__*/
-      // Con classNames podemos pasarle un objeto con los nombres de las clases
-      // En este caso, si hecho es true, se agrega la clase deseo-lista__item--hecho
-      // Las keys sirven para que React pueda identificar cada elemento de la lista.
-      // Recomendable cuando se hace un map
-      _react.default.createElement("li", {
-        key: texto,
-        className: (0, _classnames.default)('deseo-lista__item', {
-          'deseo-lista__item--hecho': hecho
-        })
-      }, /*#__PURE__*/_react.default.createElement("label", {
-        htmlFor: "deseo".concat(i)
-      }, /*#__PURE__*/_react.default.createElement("input", {
-        id: "deseo".concat(i),
-        type: "checkbox",
-        checked: hecho
-      }), texto))
-    );
+    return /*#__PURE__*/_react.default.createElement(_DeseoItem.default, {
+      texto: texto,
+      hecho: hecho,
+      id: "deseo".concat(i),
+      key: texto,
+      onItemHecho: function onItemHecho(value) {
+        var updateDeseos = _toConsumableArray(deseos);
+        // Actualizamos el estado del deseo con el valor del checkbox
+        updateDeseos[i].hecho = value;
+        // Llamamos al callback onDeseosCambiados con el nuevo estado de los deseos
+        onDeseosCambiados(updateDeseos);
+      }
+    });
   }));
 };
 DeseoLista.propTypes = {
-  deseos: _propTypes.default.arrayOf(_propTypes.default.shape({
+  deseos: _propTypes.default.arrayOf(
+  // Como deseos es un array de objetos, le pasamos el shape para definir el objeto
+  _propTypes.default.shape({
     texto: _propTypes.default.string,
     hecho: _propTypes.default.bool
-  }))
+  })),
+  onDeseosCambiados: _propTypes.default.func
 };
 DeseoLista.defaultProps = {
-  deseos: []
+  deseos: [],
+  onDeseosCambiados: function onDeseosCambiados() {}
 };
 var _default = DeseoLista;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","classnames":"../node_modules/classnames/index.js"}],"App/DeseoLista/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","../DeseoItem":"App/DeseoItem/index.js"}],"App/DeseoLista/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30012,12 +30118,24 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 require("./App.css");
 var _DeseoInput = _interopRequireDefault(require("./DeseoInput"));
 var _DeseoLista = _interopRequireDefault(require("./DeseoLista"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var deseos = [{
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+var inicialesDeseos = [{
   texto: 'Saltar de un puente',
   hecho: false
 }, {
@@ -30028,13 +30146,27 @@ var deseos = [{
   hecho: true
 }];
 var App = function app() {
+  var _useState = (0, _react.useState)(inicialesDeseos),
+    _useState2 = _slicedToArray(_useState, 2),
+    deseos = _useState2[0],
+    setDeseos = _useState2[1];
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "app"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "Mi lista de deseados"), /*#__PURE__*/_react.default.createElement(_DeseoInput.default, null), /*#__PURE__*/_react.default.createElement(_DeseoLista.default, {
-    deseos: deseos
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "Mi lista de deseados"), /*#__PURE__*/_react.default.createElement(_DeseoInput.default, {
+    onNuevoDeseo: function onNuevoDeseo(deseo) {
+      return setDeseos([deseo].concat(_toConsumableArray(deseos)));
+    }
+  }), /*#__PURE__*/_react.default.createElement(_DeseoLista.default, {
+    deseos: deseos,
+    onDeseosCambiados: setDeseos
   }), /*#__PURE__*/_react.default.createElement("button", {
     className: "deseo-limpiar",
-    type: "button"
+    type: "button",
+    onClick: function onClick() {
+      return setDeseos(deseos.filter(function (deseo) {
+        return !deseo.hecho;
+      }));
+    }
   }, "Archivar"));
 };
 var _default = App;
@@ -30083,7 +30215,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39815" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42723" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

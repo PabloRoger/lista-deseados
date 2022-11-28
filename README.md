@@ -32,7 +32,7 @@ Para la implementación de esta aplicación **necesitamos node.js** e instalar u
 	> `npm install --save husky`
 
 - **Instalamos eslint** para que nos ayude en tener un código libre de errores
-	> `npm install --save-dev eslint`.
+	> `npm install --save-dev eslint`
 	> `npm install --save-dev eslint-config-airbnb`
 	> `npm install --save-dev eslint-plugin-import`
 	> `npm install --save-dev eslint-plugin-jsx-ally`
@@ -47,4 +47,4 @@ Para la implementación de esta aplicación **necesitamos node.js** e instalar u
 Las flags `--save` o `--save-dev` se pueden no usar si ya tenemos el package.json ya creado y actualizado con esas dependencias.
 
 ## Documentación
-Información sacada sobre React.js en: https://es.reactjs.org/
+Información sacada sobre React.js en: https://es.reactjs.org/ y del curso React para principiantes de Álvaro Yuste en OpenWebinars
