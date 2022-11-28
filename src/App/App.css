@@ -63,6 +63,13 @@
   text-decoration: line-through;
 }
 
+.deseo-lista__item--warning{
+  color: orange;
+}
+
+.deseo-lista__item--danger{
+  color:red;
+}
 
 .deseo-limpiar{
   width: 100%;
